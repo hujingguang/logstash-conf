@@ -1,0 +1,6 @@
+
+
+./bin/plugin install  logstash-patterns-core    # install  regex plugin
+
+
+nohup ./bin/logstash agent  -f java.conf &   #   run logstash as daemon 
