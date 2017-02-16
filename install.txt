@@ -4,3 +4,7 @@
 
 
 nohup ./bin/logstash agent  -f java.conf &   #   run logstash as daemon 
+
+
+
+doc URL:   http://udn.yyuap.com/doc/logstash-best-practice-cn/get_start/daemon.html
