@@ -49,7 +49,17 @@ class MainHandler(SocketServer.BaseRequestHandler):
 	    upstream_time=data.get('upstream_time','0.0')
 	    response_time=data.get('response_time','0.0')
 	    sql=''' insert into log_info(host,logdate,method,uri,protocol,status,bytes,referer,upstream_time,response_time,message) 
-	    values("{0}","{1}","{2}","{3}","{4}","{5}","{6}","{7}","{8}","{9}","{10}")'''.format(host,logdate,method,uri,protocol,status,bytes,referer,upstream_time,response_time,message)
+	    values("{0}","{1}","{2}","{3}","{4}","{5}","{6}","{7}","{8}","{9}","{10}")'''.format(host,
+		    logdate,
+		    method,
+		    uri,
+		    protocol,
+		    status,
+		    bytes,
+		    referer,
+		    upstream_time,
+		    response_time,
+		    message)
 	    conn=self.get_connection()
 	    if conn:
 		try:
