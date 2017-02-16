@@ -7,6 +7,7 @@ import socket
 import MySQLdb
 import logging
 import time
+import sys
 import datetime
 
 
@@ -34,6 +35,7 @@ class MainHandler(SocketServer.BaseRequestHandler):
 	except Exception as e:
 	     logging.error(e)
 	     self.conn=None
+	     sys.exit(1)
 	return self.conn
     def insert_to_mysql(self,data={}):
 	if data:
